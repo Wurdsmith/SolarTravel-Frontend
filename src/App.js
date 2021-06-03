@@ -1,16 +1,16 @@
 import './App.css';
-import Itinerary from './Itinerary'
-import About from './About'
-import Nav from './Nav'
-import Home from './Home'
-import Map from './Map'
+import Itinerary from './Components/Itinerary'
+import About from './Components/About'
+import Nav from './Components/Nav'
+import Home from './Components/Home'
+import Map from './Components/Map'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 
 function App() {
   return (
     <Router>
-      <div class='AppContainer'>
+      <div className='AppContainer'>
         <Nav />,
         <Switch>
         <Route path ="/" exact component={Home}/>

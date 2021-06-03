@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-   list-style: none;
+  list-style: none;
 
 }
 
@@ -35,4 +35,8 @@ Nav{
   min-height: 10vh;
   background: rgb(18, 26, 39);
   color: white;
+}
+
+li{
+  list-style: none;
 }
