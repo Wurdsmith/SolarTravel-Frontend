@@ -3,6 +3,8 @@ export default function destinationReducer(state = {destinations: [], addedDesti
       switch (action.type) {
         case "FETCH_DESTINATIONS":
             return {...state, destinations: action.payload}
+        case "FETCH_ADDED_DESTINATIONS":
+            return {...state, addedDestinations: action.payload}
         case "ADD_DESTINATION":
             return {...state, addedDestinations: action.payload}
         default:

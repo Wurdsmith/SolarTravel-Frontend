@@ -26,7 +26,23 @@
   padding: 1em;
 }
 
+.addedDestContainer{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.addedDest{
+  color: white;
+  display:flex;
+  flex-direction:column;
+  padding: 1em;
+}
+
 .destImage{
+  height: 200px;
+}
+
+.addedDestImage{
   height: 200px;
 }
 

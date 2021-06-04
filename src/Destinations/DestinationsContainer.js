@@ -1,31 +1,24 @@
 import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
-import fetchDestinations from '../actions/FetchDestinations'
 import addDestination from  '../actions/AddDestinations'
 
 class DestinationsContainer extends Component {
 
   constructor() {
     super()
-    this.state = {
-      destinations: [],
-      redirect: false
-    }
+    this.state = {destinations: []}
   }
 
-
-    componentDidMount() {
-        this.props.fetchDestinations()
-    }
 
     handleSubmit(destination) {
       let newDestination = destination;
       newDestination.itinerary_id = 2;
       this.props.addDestination(newDestination)
+      this.props.history.push("/itinerary")
     }
+
     render() {
-      debugger
         return (
           <div className="destContainer">
               {this.props.destinations.map((destination, i) => 
@@ -48,4 +41,4 @@ function mapStateToProps(state) {
     return {destinations: state.destinations}
   }
 
-export default connect(mapStateToProps, {fetchDestinations, addDestination})(DestinationsContainer)
+export default withRouter(connect(mapStateToProps, {addDestination})(DestinationsContainer))
