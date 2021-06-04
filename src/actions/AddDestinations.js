@@ -5,7 +5,7 @@ export default function addDestination(destination) {
         headers: {Accept: "application/json", "Content-Type": "application/json"},
         body: JSON.stringify({destination: destination})
       }).then(resp => resp.json())
-      .then(dispatch => dispatch({type: "ADD_DESTINATION", payload: destination}))
+      .then(destination => dispatch({type: "ADD_DESTINATION", payload: destination}))
     }
   
   }
