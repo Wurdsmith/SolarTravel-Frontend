@@ -2,6 +2,28 @@
   text-align: center;
 }
 
+Nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: #000326;
+  color: white;
+}
+
+.nav-Links{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+
+}
+.text-link{
+  text-decoration:none;
+  color:white;
+}
+
 .AppContainer{
   background-image:url('https://www.solarsystemscope.com/textures/download/2k_stars.jpg');
   background-size:cover;
@@ -12,7 +34,6 @@
   height: 100%;
   width: 100%;
 }
-
 
 .destContainer{
   display:flex;
@@ -73,15 +94,6 @@
   text-align: center;
 }
 
-.nav-Links{
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -93,15 +105,4 @@ canvas {
   height: 100%;
 }
 
-Nav{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background: #000326;
-  color: white;
-}
 
-li{
-  list-style: none;
-}

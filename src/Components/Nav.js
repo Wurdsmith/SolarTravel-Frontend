@@ -6,17 +6,17 @@ function Nav() {
     <nav>
         <img className="logo" src="https://image.freepik.com/free-vector/rocket-space-moon-logo_26003-161.jpg" alt="Italian Trulli"></img>
             <ul className="nav-Links">
-                <Link to="/">
-                <li>Home</li>
+                <Link to="/" className='text-link'>
+                <h2>Home</h2>
                 </Link>
-                <Link to="/itinerary">
-                <li>Itinerary</li>
+                <Link to="/itinerary" className='text-link'>
+                <h2>Itinerary</h2>
                 </Link>
-                <Link to="/map">
-                <li>Map</li>
+                <Link to="/map" className='text-link'>
+                <h2>Map</h2>
                 </Link>
-                <Link to="/about">
-                <li>About</li>
+                <Link to="/about" className='text-link'>
+                <h2>About</h2>
                 </Link>
                 
             </ul>
