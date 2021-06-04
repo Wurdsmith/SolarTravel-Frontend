@@ -1,5 +1,5 @@
 export default function destinationReducer(state = {destinations: [], addedDestinations: []}, action) {
-    console.log(state)
+    debugger
       switch (action.type) {
         case "FETCH_DESTINATIONS":
             return {...state, destinations: action.payload}
@@ -7,6 +7,8 @@ export default function destinationReducer(state = {destinations: [], addedDesti
             return {...state, addedDestinations: action.payload}
         case "ADD_DESTINATION":
             return {...state, addedDestinations: [...state.addedDestinations, action.payload]}
+        case "DELETE_DESTINATION":
+            return {...state, addedDestinations: state.addedDestinations.filter(destination => destination.id !== action.payload.id)}
         default:
             return state
     }
