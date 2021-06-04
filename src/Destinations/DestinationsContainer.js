@@ -23,7 +23,10 @@ class DestinationsContainer extends Component {
           <div className="destContainer">
               {this.props.destinations.map((destination, i) => 
                 <div className="destination" key={destination.id}>
-                    <h2>{destination.name}</h2>
+                    <h2>Name: {destination.name}</h2>
+                    <h3>Distance from Earth: {destination.distance}Million Miles</h3>
+                    <h3>Temperature: {destination.temperature}° Celcius</h3>
+                    <h3>{destination.gravity}x Earth's Gravity</h3>
                     <img className="destImage" src={destination.image_url} alt={destination.name}></img>
                     <button className="destButton" onClick={() => this.handleSubmit(destination)}>Add Location to Itinerary!</button>
                     </div>

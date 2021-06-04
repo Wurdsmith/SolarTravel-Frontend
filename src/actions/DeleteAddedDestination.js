@@ -7,5 +7,4 @@ export default function deleteAddedDestination(destinationId) {
       }).then(resp => resp.json())
       .then(destination => dispatch({type: "DELETE_DESTINATION", payload: destination}))
     }
-  
   }

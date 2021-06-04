@@ -1,5 +1,4 @@
 export default function destinationReducer(state = {destinations: [], addedDestinations: []}, action) {
-    debugger
       switch (action.type) {
         case "FETCH_DESTINATIONS":
             return {...state, destinations: action.payload}
