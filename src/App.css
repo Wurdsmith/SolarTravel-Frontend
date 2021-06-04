@@ -2,6 +2,38 @@
   text-align: center;
 }
 
+.AppContainer{
+  background-image:url('https://www.solarsystemscope.com/textures/download/2k_stars.jpg');
+  background-size:cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin:auto;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+
+.destContainer{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.destination{
+  color: white;
+  display:flex;
+  flex-direction:column;
+  padding: 1em;
+}
+
+.destImage{
+  height: 200px;
+}
+
+.logo{
+  height: 125px;
+}
+
 .itinerary{
   text-align: center;
 }
@@ -27,13 +59,23 @@
 
 }
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 Nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background: rgb(18, 26, 39);
+  background: #000326;
   color: white;
 }
 

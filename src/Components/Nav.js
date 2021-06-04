@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 function Nav() {
   return (
     <nav>
-        <h3>Logo</h3>
+        <img className="logo" src="https://image.freepik.com/free-vector/rocket-space-moon-logo_26003-161.jpg" alt="Italian Trulli"></img>
             <ul className="nav-Links">
                 <Link to="/">
                 <li>Home</li>

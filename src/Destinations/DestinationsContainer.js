@@ -8,7 +8,10 @@ class DestinationsContainer extends Component {
 
   constructor() {
     super()
-    this.state = {destinations: []}
+    this.state = {
+      destinations: [],
+      redirect: false
+    }
   }
 
 
@@ -22,12 +25,13 @@ class DestinationsContainer extends Component {
       this.props.addDestination(newDestination)
     }
     render() {
+      debugger
         return (
           <div className="destContainer">
               {this.props.destinations.map((destination, i) => 
                 <div className="destination" key={destination.id}>
                     <h2>{destination.name}</h2>
-                    <img src={destination.image_url} alt={destination.name}></img>
+                    <img className="destImage" src={destination.image_url} alt={destination.name}></img>
                     <button className="destButton" onClick={() => this.handleSubmit(destination)}>Add Location to Itinerary!</button>
                     </div>
                  )}
