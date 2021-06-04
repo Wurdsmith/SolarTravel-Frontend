@@ -1,23 +1,35 @@
 import React, {Component} from 'react'
+import {withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
 import fetchDestinations from '../actions/FetchDestinations'
+import addDestination from  '../actions/AddDestinations'
 
 class DestinationsContainer extends Component {
+
+  constructor() {
+    super()
+    this.state = {destinations: []}
+  }
 
 
     componentDidMount() {
         this.props.fetchDestinations()
     }
 
+    handleSubmit(destination) {
+      let newDestination = destination;
+      newDestination.itinerary_id = 2;
+      this.props.addDestination(newDestination)
+    }
     render() {
-        debugger
         return (
-          <div>
+          <div className="destContainer">
               {this.props.destinations.map((destination, i) => 
-                <li key={destination.id}>
+                <div className="destination" key={destination.id}>
                     <h2>{destination.name}</h2>
                     <img src={destination.image_url} alt={destination.name}></img>
-                    </li>
+                    <button className="destButton" onClick={() => this.handleSubmit(destination)}>Add Location to Itinerary!</button>
+                    </div>
                  )}
           </div>
         )
@@ -32,4 +44,4 @@ function mapStateToProps(state) {
     return {destinations: state.destinations}
   }
 
-export default connect(mapStateToProps, {fetchDestinations})(DestinationsContainer)
+export default connect(mapStateToProps, {fetchDestinations, addDestination})(DestinationsContainer)

@@ -8,7 +8,10 @@ import {Provider} from 'react-redux'
 import thunk from 'redux-thunk'
 import destinationReducer from './Reducers/destinationReducer'
 
-const initialState = {destinations: []}
+const initialState = {
+  destinations: [],
+  addedDestinations: []
+}
 
 const store = createStore(destinationReducer, initialState, compose(applyMiddleware(thunk), composeWithDevTools()))
 
