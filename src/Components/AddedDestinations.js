@@ -1,6 +1,6 @@
 import '../App.css';
 
-export default function AddedDestination(props){
+export default function AddedDestinations(props){
 
         return(
             <div className="destinationCard">
