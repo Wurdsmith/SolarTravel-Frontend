@@ -2,16 +2,20 @@ import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
 import addDestination from  '../actions/AddDestinations'
+import Destination from '../Components/Destination'
 
 class DestinationsContainer extends Component {
 
   constructor() {
     super()
-    this.state = {destinations: []}
+    this.state = {
+      destinations: [],
+    }
   }
 
 
     handleSubmit(destination) {
+      debugger
       let newDestination = destination;
       newDestination.itinerary_id = 2;
       this.props.addDestination(newDestination)
@@ -22,23 +26,12 @@ class DestinationsContainer extends Component {
         return (
           <div className="destContainer">
               {this.props.destinations.map((destination, i) => 
-                <div className="destination" key={destination.id}>
-                    <h2>Name: {destination.name}</h2>
-                    <h4>Distance from Earth: {destination.distance} Million Miles</h4>
-                    <h4>Temperature: {destination.temperature}° Celcius</h4>
-                    <h4>{destination.gravity}x Earth's Gravity</h4>
-                    <img className="destImage" src={destination.image_url} alt={destination.name}></img>
-                    <button className="destButton" onClick={() => this.handleSubmit(destination)}>Add Location to Itinerary!</button>
-                    </div>
-                 )}
+            <Destination destination={destination} handleSubmit={() => this.handleSubmit(destination)}/>)}
           </div>
         )
-    }
-
+  }
 }
 
-// list={this.state.lists.find(list => list.id === parseInt(routerProps.match.params.id))}
-// <Route path="/lists/new" render={(routerProps) => <ListForm sendData={this.updateState} {...routerProps}/>}/>
 
 function mapStateToProps(state) {
     return {destinations: state.destinations}
