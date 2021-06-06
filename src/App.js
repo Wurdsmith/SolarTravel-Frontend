@@ -22,7 +22,7 @@ class App extends Component {
   return (
     <Router>
       <div className='AppContainer'>
-        <Nav />,
+        <Nav />
         <Switch>
         <Route path ="/" exact component={Home}/>
         <Route path="/itinerary" component={Itinerary}/>
