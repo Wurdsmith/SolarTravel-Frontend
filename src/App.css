@@ -32,8 +32,17 @@ Nav{
 }
 
 .formContainer{
-  padding: 2em;
+  padding: 1.5em;
   background-color:#000326;
+}
+
+
+.filterButton{
+  font-size:large;
+  margin: 2em;
+  background-color:#0878ac;
+  color: white;
+  border-radius: 12px;
 }
 
 .destContainer{
@@ -57,18 +66,6 @@ Nav{
   background-blend-mode: soft-light;
 }
 
-.addedDestContainer{
-  display:flex;
-  flex-wrap: wrap;
-}
-
-.addedDest{
-  color: white;
-  display:flex;
-  flex-direction:column;
-  padding: 1em;
-}
-
 .destImage{
   float: left;
   height: 450px;
@@ -88,8 +85,30 @@ Nav{
   font-weight: bolder;
 }
 
-.addedDestImage{
-  height: 200px;
+.addedDestContainer{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.addedDest{
+  border-radius: 25px;
+  color: white;
+  display:flex;
+  flex-direction:column;
+  padding: 1em;
+  background-color:#000326;
+  background-blend-mode: soft-light;
+}
+
+.deleteButton{
+  border-radius: 12px;
+  color:white;
+  background-color:#0878ac;
+  height: 3em;
+  width:16em;
+  align-self: center;
+  font-size: large;
+  font-weight: bolder;
 }
 
 .logo{
