@@ -1,11 +1,22 @@
 import '../App.css';
+import {aboutUsText, timelineData} from '../Assets/AboutUs'
+import TimeLineItem from '../Components/TimeLineItem'
 
-function About() {
+export default function About() {
   return (
     <div className="about">
-        <h2>About</h2>
+        <h1>About</h1>
+          <div className="aboutUs">
+            {aboutUsText.map((paragraph) =>
+              <p>{paragraph}</p>)}
+          </div>
+          <div className="timeline-container">
+            {timelineData.map((data, idx) => (
+                <TimeLineItem data={data} key={idx} />
+            ))}
+          </div>
+
+          
     </div>
   );
 }
-
-export default About;

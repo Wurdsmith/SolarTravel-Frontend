@@ -6,10 +6,24 @@
 Nav{
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background: #000326;
+  min-height: 10em;
+  background: rgb(20, 20, 20, 0.5);
   color: white;
+}
+
+
+.logoImage{
+  height: 100px;
+  float:left;
+  margin-top: 30px;
+  
+}
+
+.logo{
+  font-size:36px;
+  float:right;
+  margin-top: 35px;
+  
 }
 
 .nav-Links{
@@ -18,6 +32,7 @@ Nav{
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  width: 800px;
 
 }
 .text-link{
@@ -31,16 +46,53 @@ Nav{
   font-family: 'Rambla', sans-serif;
 }
 
-.formContainer{
-  padding: 1.5em;
-  background-color:#000326;
+.homeHeader{
+  font-size: 48px;
 }
 
+.homeSubhead{
+  font-size: 20px;
+}
+
+.formContainer{
+  padding: 1.5em;
+}
+
+.form{
+  border-radius: 25px;
+  background-color: rgb(0, 40, 105, 0.5);
+  display:flex;
+  justify-content: center;
+  display: inline-block;
+	text-align: center;
+  width: 1100px;
+  padding-bottom: 1.5em;
+}
+
+.formHeadline{
+ color:rgb(255, 255, 255)
+}
+
+.formFilter{
+  font-size: larger;
+  justify-content: left;
+  opacity: 100%;
+}
+
+.select{
+  font-size: medium;
+}
+
+label{
+  display: inline-block;
+  width: 500px;
+  text-align: left; /*Change to right here if you want it close to the inputs*/
+}
 
 .filterButton{
   font-size:large;
   margin: 2em;
-  background-color:#0878ac;
+  background-color:#141414;
   color: white;
   border-radius: 12px;
 }
@@ -62,7 +114,7 @@ Nav{
   display:flex;
   flex-direction:column;
   padding: 1em;
-  background-color:#000326;
+  background-color:rgb(0, 40, 105, 0.5);
   background-blend-mode: soft-light;
 }
 
@@ -77,7 +129,7 @@ Nav{
 .destButton{
   border-radius: 12px;
   color:white;
-  background-color:#0878ac;
+  background-color:rgb(20, 20, 20, 0.5);
   height: 3em;
   width:16em;
   align-self: center;
@@ -97,8 +149,7 @@ Nav{
   display:flex;
   flex-direction:column;
   padding: 1em;
-  background-color:#000326;
-  background-blend-mode: soft-light;
+  background-color:rgb(0, 40, 105, 0.5);
 }
 
 .deleteButton{
@@ -112,9 +163,7 @@ Nav{
   font-weight: bolder;
 }
 
-.logo{
-  height: 125px;
-}
+
 
 .itinerary{
   text-align: center;
@@ -132,45 +181,125 @@ Nav{
   text-align: center;
 }
 
-body {
-  padding: 0;
-  margin: 0;
+.mapHeader{
+  font-size: 48px;
 }
 
-canvas {
+.mapSubheard{
+  font-size: 20px;
+}
+
+.mapImage{
+  border-radius: 12px;
+  opacity: 65%;
+}
+
+
+.about{
+  font-size: large;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 40px 0;
+}
+
+.timeline-container::after {
+  background-color: #0878ac;
+  content: '';
   position: absolute;
-  width: 100%;
+  left: calc(50% - 2px);
+  width: 4px;
   height: 100%;
 }
 
-form {
-  width: 80%;
-  margin: 0 auto;
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  position: relative;
+  margin: 10px 0;
+  width: 50%;
 }
 
-label,
-input {
-  /* In order to define widths */
-  display: inline-block;
+.timeline-item:nth-child(odd) {
+  align-self: flex-end;
+  justify-content: flex-start;
+  padding-left: 30px;
+  padding-right: 0;
 }
 
-label {
-  width: 30%;
-  /* Positions the label text beside the input */
-  text-align: center;
+.timeline-item-content {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: #002869;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 15px;
+  position: relative;
+  width: 400px;
+  max-width: 70%;
+  text-align: right;
 }
 
-label+input {
-  width: 30%;
-  /* Large margin-right to force the next element to the new-line
-           and margin-left to create a gutter between the label and input */
-  margin: 0 30% 0 4%;
+.timeline-item-content::after {
+  content: ' ';
+  background-color: #0878ac;
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: -7.5px;
+  top: calc(50% - 7.5px);
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
 }
 
+.timeline-item:nth-child(odd) .timeline-item-content {
+  text-align: left;
+  align-items: flex-start;
+}
 
-/* Only the submit button is matched by this selector,
-       but to be sure you could use an id or class for that button */
+.timeline-item:nth-child(odd) .timeline-item-content::after {
+  right: auto;
+  left: -7.5px;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
 
-input+input {
-  float: center;
+.timeline-item:nth-child(odd) .timeline-item-content .tag {
+  left: auto;
+  right: 5px;
+}
+
+.timeline-item-content time {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.timeline-item-content p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 15px 0;
+  max-width: 400px;
+}
+
+.timeline-item-content .circle {
+  background-color: #fff;
+  border: 3px solid #0878ac;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: -40px;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content .circle {
+  right: auto;
+  left: -40px;
 }

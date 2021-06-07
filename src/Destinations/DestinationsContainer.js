@@ -5,7 +5,7 @@ import addDestination from  '../actions/AddDestinations'
 import Destination from '../Components/Destination'
 import Form from '../Components/Form'
 import fetchDestinations from '../actions/FetchDestinations'
-import {filterHotDestinations, filterWarmDestinations, filterColdDestinations} from '../actions/FilterDestinations'
+import {filterHotDestinations, filterWarmDestinations, filterColdDestinations, filterFrigidDestinations} from '../actions/FilterDestinations'
 
 class DestinationsContainer extends Component {
 
@@ -31,7 +31,6 @@ class DestinationsContainer extends Component {
     
     handleFilter(event){
       event.preventDefault();
-      debugger
         switch (event.target.value) {
         case "any":
             return this.props.fetchDestinations()
@@ -41,6 +40,8 @@ class DestinationsContainer extends Component {
           return this.props.fetchDestinations() + this.props.filterWarmDestinations()
         case "cold":
          return this.props.fetchDestinations() + this.props.filterColdDestinations()
+         case "frigid":
+         return this.props.fetchDestinations() + this.props.filterFrigidDestinations()
          default:
             return this.props.destinations
 
@@ -51,7 +52,7 @@ class DestinationsContainer extends Component {
 
     render() {
         return (
-          <div className="destComponentContainer">
+        <div className="homeContainer">
             <div className="formContainer">
               <Form handleFilter={this.handleFilter.bind(this)}/>
             </div>
@@ -69,4 +70,4 @@ function mapStateToProps(state) {
     return {destinations: state.allDestinations.destinations}
   }
 
-export default withRouter(connect(mapStateToProps, {addDestination, fetchDestinations, filterHotDestinations, filterWarmDestinations, filterColdDestinations})(DestinationsContainer))
+export default withRouter(connect(mapStateToProps, {addDestination, fetchDestinations, filterHotDestinations, filterWarmDestinations, filterColdDestinations, filterFrigidDestinations})(DestinationsContainer))
