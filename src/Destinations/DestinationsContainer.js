@@ -12,13 +12,10 @@ class DestinationsContainer extends Component {
   constructor() {
     super()
     this.state = {
-      destinations: [],
-      temperature: '',
-      distance: '',
-      gravity: ''
+      destinations: []
     }
   }
-
+   
 
     handleSubmit(destination) {
       let newDestination = destination;
@@ -29,7 +26,7 @@ class DestinationsContainer extends Component {
 
     
     
-    handleFilter(event){
+    handleFilter(event){  
       event.preventDefault();
         switch (event.target.value) {
         case "any":
@@ -46,8 +43,6 @@ class DestinationsContainer extends Component {
             return this.props.destinations
 
         }
-
-
     }
 
     render() {

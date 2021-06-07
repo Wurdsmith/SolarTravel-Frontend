@@ -6,24 +6,22 @@
 Nav{
   display: flex;
   justify-content: space-around;
-  min-height: 10em;
   background: rgb(20, 20, 20, 0.5);
   color: white;
+  padding: 8px;
 }
 
 
 .logoImage{
   height: 100px;
   float:left;
-  margin-top: 30px;
   
 }
 
 .logo{
   font-size:36px;
   float:right;
-  margin-top: 35px;
-  
+  margin-left: 8px;
 }
 
 .nav-Links{
@@ -54,8 +52,12 @@ Nav{
   font-size: 20px;
 }
 
+.homeContainer{
+  padding:1em;
+}
+
 .formContainer{
-  padding: 1.5em;
+  padding: 2.5em;
 }
 
 .form{
@@ -192,11 +194,18 @@ label{
 .mapImage{
   border-radius: 12px;
   opacity: 65%;
+  padding:2.5em;
 }
 
 
 .about{
   font-size: large;
+}
+
+.aboutUs{
+  background-color: rgb(0, 40, 105, 0.5);
+  padding:1em;
+  
 }
 
 .timeline-container {
@@ -302,4 +311,15 @@ label{
 .timeline-item:nth-child(odd) .timeline-item-content .circle {
   right: auto;
   left: -40px;
+}
+
+.footer{
+  font-size: large;
+  text-align: center;
+  background-color: rgb(0, 40, 105, 0.5);
+  padding:.5em;
+} 
+
+.footerLink{
+  color: rgb(60, 135, 255);
 }
