@@ -33,7 +33,7 @@ class AddedDestinationsContainer extends Component {
 
 
 function mapStateToProps(state) {
-    return {addedDestinations: state.addedDestinations}
+    return {addedDestinations: state.allDestinations.addedDestinations}
   }
 
 export default withRouter(connect(mapStateToProps, {deleteAddedDestination})(AddedDestinationsContainer))

@@ -66,7 +66,7 @@ class DestinationsContainer extends Component {
 
 
 function mapStateToProps(state) {
-    return {destinations: state.destinations}
+    return {destinations: state.allDestinations.destinations}
   }
 
 export default withRouter(connect(mapStateToProps, {addDestination, fetchDestinations, filterHotDestinations, filterWarmDestinations, filterColdDestinations})(DestinationsContainer))
