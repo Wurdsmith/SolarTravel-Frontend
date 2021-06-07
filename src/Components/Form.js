@@ -1,6 +1,6 @@
 import '../App.css';
 
-export default function Destination(props){
+export default function Form(props){
 
         return(
             <div className="form">
@@ -9,8 +9,8 @@ export default function Destination(props){
                     <form>
                         <label className="climateFilter">
                         Filter by average surface temperature:
-                        <select default = "Select a climate" onChange= {(event) => props.handleFilter(event)}>
-                            <option defaultValue="any">No Preference - Spin the climate wheel. I'm down for anything.</option>
+                        <select className= "selectTemperature" onChange= {(event) => props.handleFilter(event)}>
+                            <option value="any">No Preference - Spin the climate wheel. I'm down for anything.</option>
                             <option value="hot">Hot - I'm ready for some radiation burns!</option>
                             <option value="warm">Warm - Send me somewhere warm and comfortable.</option>
                             <option value="cold">Cold - Enough global warming. Show me some colder places.</option>
@@ -20,8 +20,8 @@ export default function Destination(props){
                         
                         <label>
                         Filter by distance from Earth:
-                        <select default = "Select a climate" onChange= {(event) => props.handleFilter(event)}>
-                        <option defaultValue="any">No Preference - The solar system is my oyster.</option>
+                        <select className= "selectDistance" onChange= {(event) => props.handleFilter(event)}>
+                        <option default="any">No Preference - The solar system is my oyster.</option>
                             <option value="closest">Near-Earth destinations only, please.</option>
                             <option value="close">I'd like to visit somewhere in the inner solar system.</option>
                             <option value="far">A little distance is ok. Anywhere from Earth to Neptune should be fine.</option>
@@ -31,8 +31,8 @@ export default function Destination(props){
 
                         <label>
                         Filter by gravitational preference:
-                        <select default = "Select a climate" onChange= {(event) => props.handleFilter(event)}>
-                        <option defaultValue="any">No Preference - I have relatively no opinion.</option>
+                        <select className= "selectGravity" onChange= {(event) => props.handleFilter(event)}>
+                        <option default="any">No Preference - I have relatively no opinion.</option>
                             <option value="closest">Near-Earth destinations only, please.</option>
                             <option value="close">I'd like to visit somewhere in the inner solar system.</option>
                             <option value="far">A little distance is ok. Anywhere from Earth to Neptune should be fine.</option>

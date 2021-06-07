@@ -15,7 +15,6 @@ class AddedDestinationsContainer extends Component {
   }
 
     handleDelete(destination){
-        debugger
     let destinationId = destination.id
     this.props.deleteAddedDestination(destinationId)
     this.props.history.push("/itinerary")

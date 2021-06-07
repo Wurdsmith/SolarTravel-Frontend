@@ -5,6 +5,7 @@ import addDestination from  '../actions/AddDestinations'
 import Destination from '../Components/Destination'
 import Form from '../Components/Form'
 import fetchDestinations from '../actions/FetchDestinations'
+import {filterHotDestinations, filterWarmDestinations, filterColdDestinations} from '../actions/FilterDestinations'
 
 class DestinationsContainer extends Component {
 
@@ -26,11 +27,25 @@ class DestinationsContainer extends Component {
       this.props.history.push("/itinerary")
     }
 
-    handleSort(event){
-      event.preventDefault(); 
+    
+    
+    handleFilter(event){
+      event.preventDefault();
       debugger
-      this.props.fetchDestinations()
-      let allDests = this.state
+        switch (event.target.value) {
+        case "any":
+            return this.props.fetchDestinations()
+        case "hot":
+          return this.props.fetchDestinations() + this.props.filterHotDestinations()
+        case "warm":
+          return this.props.fetchDestinations() + this.props.filterWarmDestinations()
+        case "cold":
+         return this.props.fetchDestinations() + this.props.filterColdDestinations()
+         default:
+            return this.props.destinations
+
+        }
+
 
     }
 
@@ -38,7 +53,7 @@ class DestinationsContainer extends Component {
         return (
           <div className="destComponentContainer">
             <div className="formContainer">
-              <Form handleFilter={this.handleSort}/>
+              <Form handleFilter={this.handleFilter.bind(this)}/>
             </div>
               <div className="destContainer">
                   {this.props.destinations.map((destination) => 
@@ -54,4 +69,4 @@ function mapStateToProps(state) {
     return {destinations: state.destinations}
   }
 
-export default withRouter(connect(mapStateToProps, {addDestination, fetchDestinations})(DestinationsContainer))
+export default withRouter(connect(mapStateToProps, {addDestination, fetchDestinations, filterHotDestinations, filterWarmDestinations, filterColdDestinations})(DestinationsContainer))
