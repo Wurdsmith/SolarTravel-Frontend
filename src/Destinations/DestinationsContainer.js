@@ -30,17 +30,17 @@ class DestinationsContainer extends Component {
       event.preventDefault();
         switch (event.target.value) {
         case "any":
-            return this.props.fetchDestinations()
+          return this.props.fetchDestinations()
         case "hot":
           return this.props.fetchDestinations() + this.props.filterHotDestinations()
         case "warm":
           return this.props.fetchDestinations() + this.props.filterWarmDestinations()
         case "cold":
-         return this.props.fetchDestinations() + this.props.filterColdDestinations()
-         case "frigid":
-         return this.props.fetchDestinations() + this.props.filterFrigidDestinations()
-         default:
-            return this.props.destinations
+          return this.props.fetchDestinations() + this.props.filterColdDestinations()
+        case "frigid":
+          return this.props.fetchDestinations() + this.props.filterFrigidDestinations()
+        default:
+          return this.props.destinations
 
         }
     }

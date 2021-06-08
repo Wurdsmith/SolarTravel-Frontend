@@ -13,7 +13,7 @@ export default function Form(props){
                         <label className="climateFilter">
                         Filter by average surface temperature:
                         <select className= "select" onChange= {(event) => props.handleFilter(event)}>
-                            <option value="any">No Preference - Spin the climate wheel. I'm down for anything.</option>
+                            <option value="">No Preference - Spin the climate wheel. I'm down for anything.</option>
                             <option value="hot">Hot - I'm ready for some radiation burns!</option>
                             <option value="warm">Warm - Send me somewhere warm and comfortable.</option>
                             <option value="cold">Cold - Enough global warming. Show me some colder places.</option>

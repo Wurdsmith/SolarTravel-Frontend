@@ -41,7 +41,7 @@ export function filterHotDestinations() {
         return response.json()
       })
       .then((destinationsArray) => {
-        dispatch({type: "FETCH_FRIGID_DESTINATIONS", payload: destinationsArray.destinations})
+        dispatch({type: "FETCH_COLD_DESTINATIONS", payload: destinationsArray.destinations})
       })
     }
   }
