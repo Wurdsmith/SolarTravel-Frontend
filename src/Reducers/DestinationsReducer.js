@@ -1,4 +1,4 @@
-export default function destinationsReducer(state = {destinations: [], addedDestinations: [], filteredDestinations:[]}, action) {
+export default function destinationsReducer(state = {destinations: [], addedDestinations: []}, action) {
       switch (action.type) {
         case "FETCH_DESTINATIONS":
             return {...state, destinations: action.payload}
