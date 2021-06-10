@@ -12,7 +12,7 @@ export default function Form(props){
                     <form>
                         <label className="climateFilter">
                         Filter by average surface temperature:
-                        <select className= "select" onChange= {(event) => props.handleFilter(event)}>
+                        <select className= "select" onChange= {(event) => props.handleFilter(event.target.value, "temperature")}>
                             <option value="any">No Preference - Spin the climate wheel. I'm down for anything.</option>
                             <option value="hot">Hot - I'm ready for some radiation burns!</option>
                             <option value="warm">Warm - Send me somewhere warm and comfortable.</option>
@@ -23,7 +23,7 @@ export default function Form(props){
                         
                         <label>
                         Filter by distance from Earth:
-                        <select className= "select" onChange= {(event) => props.handleFilter(event)}>
+                        <select className= "select" onChange= {(event) => props.handleFilter(event.target.value, "distance")}>
                         <option default="any">No Preference - The solar system is my oyster.</option>
                             <option value="closest">Near-Earth destinations only, please.</option>
                             <option value="close">I'd like to visit somewhere in the inner solar system.</option>
@@ -34,7 +34,7 @@ export default function Form(props){
 
                         <label>
                         Filter by gravitational preference:
-                        <select className= "select" onChange= {(event) => props.handleFilter(event)}>
+                        <select className= "select" onChange= {(event) => props.handleFilter(event.target.value, "gravity")}>
                         <option default="any">No Preference - I have relatively no opinion.</option>
                             <option value="closest">Near-Earth destinations only, please.</option>
                             <option value="close">I'd like to visit somewhere in the inner solar system.</option>
@@ -47,5 +47,3 @@ export default function Form(props){
             </div>
         )    
 }
-
-
