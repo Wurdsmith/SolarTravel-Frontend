@@ -7,13 +7,11 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import {Provider} from 'react-redux'
 import thunk from 'redux-thunk'
 import destinationsReducer from './Reducers/DestinationsReducer'
-import timelineReducer from './Reducers/TimeLineReducer';
 
 
 
 const rootReducer = combineReducers({
-  allDestinations: destinationsReducer,
-  timelineData: timelineReducer
+  allDestinations: destinationsReducer
 })
 
 const store = createStore(rootReducer, compose(applyMiddleware(thunk), composeWithDevTools()))

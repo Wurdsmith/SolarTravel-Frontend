@@ -13,35 +13,33 @@ export default function Form(props){
                         <label className="climateFilter">
                         Filter by average surface temperature:
                         <select className= "select" onChange= {(event) => props.handleFilter(event.target.value, "temperature")}>
-                            <option value="any">No Preference - Spin the climate wheel. I'm down for anything.</option>
                             <option value="hot">Hot - I'm ready for some radiation burns!</option>
                             <option value="warm">Warm - Send me somewhere warm and comfortable.</option>
                             <option value="cold">Cold - Enough global warming. Show me some colder places.</option>
-                            <option value="frigid">Frigid - Bring on the iciest of ice worlds!</option>
+                            <option value="coldest">Coldest - Bring on the iciest of ice worlds!</option>
                         </select>
                         </label><br></br>
                         
                         <label>
                         Filter by distance from Earth:
                         <select className= "select" onChange= {(event) => props.handleFilter(event.target.value, "distance")}>
-                        <option default="any">No Preference - The solar system is my oyster.</option>
-                            <option value="closest">Near-Earth destinations only, please.</option>
-                            <option value="close">I'd like to visit somewhere in the inner solar system.</option>
-                            <option value="far">A little distance is ok. Anywhere from Earth to Neptune should be fine.</option>
-                            <option value="furthest">Show me everything you've got, from the Sun to the furthest dwarf planet.</option>
+                            <option value="closest">Closest - Near-Earth destinations only, please.</option>
+                            <option value="close">Close - I'd like to visit somewhere in the inner solar system.</option>
+                            <option value="far">Far - A little distance is ok. Anywhere from Earth to Neptune should be fine.</option>
+                            <option value="furthest">Furthest - Show me everything you've got, from the Sun to the furthest dwarf planet.</option>
                         </select>
                         </label><br></br>
 
                         <label>
                         Filter by gravitational preference:
                         <select className= "select" onChange= {(event) => props.handleFilter(event.target.value, "gravity")}>
-                        <option default="any">No Preference - I have relatively no opinion.</option>
-                            <option value="closest">Near-Earth destinations only, please.</option>
-                            <option value="close">I'd like to visit somewhere in the inner solar system.</option>
-                            <option value="far">A little distance is ok. Anywhere from Earth to Neptune should be fine.</option>
-                            <option value="furthest">Show me everything you've got, from the Sun to the furthest dwarf planet.</option>
+                            <option value="heavy">High gravity.</option>
+                            <option value="medium">medium gravity.</option>
+                            <option value="light">light.</option>
+                            <option value="lightest">lightest.</option>
                         </select>
                         </label>
+                        <button className="filterButton" onClick={(e) => props.handleFilterSubmit(e)}>Filter Destinations</button>
                     </form>
                 </div>
             </div>

@@ -1,17 +1,14 @@
-export default function destinationsReducer(state = {destinations: [], addedDestinations: []}, action) {
+export default function destinationsReducer(state = {destinations: [], addedDestinations: [], filteredDestinations: []}, action) {
+    debugger
       switch (action.type) {
         case "FETCH_DESTINATIONS":
             return {...state, destinations: action.payload}
         case "FETCH_ADDED_DESTINATIONS":
             return {...state, addedDestinations: action.payload}
-        case "FETCH_HOT_DESTINATIONS":
-            return {...state, destinations: state.destinations.filter(destination => destination.temperature > 25)}
-        case "FETCH_WARM_DESTINATIONS":
-            return {...state, destinations: state.destinations.filter(destination => destination.temperature <= 25 && destination.temperature > -125)}
-        case "FETCH_COLD_DESTINATIONS":
-            return {...state, destinations: state.destinations.filter(destination => destination.temperature <= -125 && destination.temperature > -200)}
-        case "FETCH_FRIGID_DESTINATIONS":
-            return {...state, destinations: state.destinations.filter(destination => destination.temperature <= -200)}
+        case "FETCH_FILTERED_DESTINATIONS":
+            return {...state, filteredDestinations: action.payload}
+        case "FILTER_DESTINATIONS":
+            return {...state, filteredDestinations: state.destinations.filter(destination => destination.temperature_class === action.payload.temp && destination.gravity_class === action.payload.grav && destination.distance_class === action.payload.dist)}
         case "ADD_DESTINATION":
             return {...state, addedDestinations: [...state.addedDestinations, action.payload]}
         case "DELETE_DESTINATION":

@@ -9,6 +9,7 @@ import Map from './Pages/Map'
 import Footer from './Components/Footer'
 import fetchDestinations from './actions/FetchDestinations'
 import fetchAddedDestinations from './actions/FetchAddedDestinations'
+import fetchFilteredDestinations from './actions/FetchFilteredDestinations'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 
@@ -17,6 +18,7 @@ class App extends Component {
   componentDidMount() {
     this.props.fetchDestinations()
     this.props.fetchAddedDestinations()
+    this.props.fetchFilteredDestinations()
   }
   
   render(){
@@ -37,4 +39,4 @@ class App extends Component {
   }
 }
 
-export default connect(null, {fetchDestinations, fetchAddedDestinations})(App)
+export default connect(null, {fetchDestinations, fetchAddedDestinations, fetchFilteredDestinations})(App)
