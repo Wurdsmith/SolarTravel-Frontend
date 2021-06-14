@@ -1,6 +1,6 @@
 DESCRIPTION
 
-**Please Note that there are TWO github repositories for this program. This is the frontend, to view the backend visit https://github.com/Wurdsmith/SolarTravel-Backend.
+**Please Note that there are TWO github repositories for this program. This is the backend, to view the backend visit https://github.com/Wurdsmith/SolarTravel-Backend.
 
 SolarTravel is fictional travel agency's website designed to help users find their dream vacation amongst the stars.
 

@@ -5,6 +5,7 @@ import addDestination from  '../actions/AddDestinations'
 import Destination from '../Components/Destination'
 import Form from '../Components/Form'
 import fetchDestinations from '../actions/FetchDestinations'
+import fetchFilteredDestinations from '../actions/FetchFilteredDestinations'
 import filterDestinations from '../actions/FilterDestinations'
 
 class DestinationsContainer extends Component {
@@ -18,6 +19,10 @@ class DestinationsContainer extends Component {
       distance:'closest',
       gravity:'heavy'
     }
+  }
+
+  componentWillUnmount(){
+    this.props.fetchFilteredDestinations()
   }
   
     handleSubmit(destination) { // Adds the selected destination to the user's itinierary and renders the itinerary page.
@@ -64,4 +69,4 @@ function mapStateToProps(state) {
     }
   }
 
-export default withRouter(connect(mapStateToProps, {addDestination, fetchDestinations, filterDestinations})(DestinationsContainer))
+export default withRouter(connect(mapStateToProps, {addDestination, fetchDestinations, filterDestinations, fetchFilteredDestinations})(DestinationsContainer))
