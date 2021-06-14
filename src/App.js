@@ -15,13 +15,13 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 class App extends Component {
 
-  componentDidMount() {
+  componentDidMount() { // Fetches the initial destination arrays that will be stored in our Redux store.
     this.props.fetchDestinations()
     this.props.fetchAddedDestinations()
     this.props.fetchFilteredDestinations()
   }
   
-  render(){
+  render(){ // App is our highest parent component (besides index.js) and renders the entire application.
   return (
     <Router>
       <div className='AppContainer'>

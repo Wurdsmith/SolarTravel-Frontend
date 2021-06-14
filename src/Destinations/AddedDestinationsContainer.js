@@ -1,6 +1,7 @@
 import '../App.css';
 import React, {Component} from 'react'
 import AddedDestinations from '../Components/AddedDestinations'
+import {withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
 import deleteAddedDestination from '../actions/DeleteAddedDestination'
 import Ships from '../Components/Ships'
@@ -14,7 +15,7 @@ class AddedDestinationsContainer extends Component {
     }
   }
 
-    handleChange(event){
+    handleChange(event){ // Sets the state depending on what ship is chosen, rendering the DOM differently for each.
       switch (event.target.value) {
         case "enterprise":
           return this.setState({
@@ -56,4 +57,4 @@ function mapStateToProps(state) {
     return {addedDestinations: state.allDestinations.addedDestinations}
   }
 
-export default connect(mapStateToProps, {deleteAddedDestination})(AddedDestinationsContainer)
+export default withRouter(connect(mapStateToProps, {deleteAddedDestination})(AddedDestinationsContainer))

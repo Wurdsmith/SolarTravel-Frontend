@@ -45,12 +45,17 @@ class DestinationsContainer extends Component {
       this.props.filterDestinations(this.state.temperature, this.state.gravity, this.state.distance)
       }
 
+      handleReset(e){
+        e.preventDefault()
+        this.props.fetchFilteredDestinations()
+      }
+
 
     render() {
         return (
         <div className="homeContainer">
             <div className="formContainer">
-              <Form handleFilter={(eventValue, formType) => this.handleFilter(eventValue, formType)} handleFilterSubmit={(e) => this.handleFilterSubmit(e)}/>
+              <Form handleFilter={(eventValue, formType) => this.handleFilter(eventValue, formType)} handleFilterSubmit={(e) => this.handleFilterSubmit(e)} handleReset={(e) => this.handleReset(e)}/>
             </div>
               <div className="destContainer">
                   {this.props.filteredDestinations.map((destination) => 

@@ -93,10 +93,24 @@ label{
 
 .filterButton{
   font-size:large;
-  margin: 2em;
+  margin-top: 16px;
+  margin-bottom:16px;
   background-color:#141414;
   color: white;
   border-radius: 12px;
+  display:flex;
+  margin:auto
+}
+
+.resetButton{
+  font-size:large;
+  margin-top: 32px;
+  background-color:#141414;
+  color: white;
+  border-radius: 12px;
+  display:flex;
+  margin:auto
+  
 }
 
 .destContainer{
@@ -167,10 +181,16 @@ label{
   font-weight: bolder;
 }
 
-
-
 .itinerary{
   text-align: center;
+}
+
+.hoursToDest{
+  font-size: larger;
+}
+
+.destPrice{
+  font-size: larger;
 }
 
 .about{

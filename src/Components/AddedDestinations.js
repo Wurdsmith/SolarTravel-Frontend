@@ -11,7 +11,8 @@ export default function AddedDestinations(props){
                     <h4>Temperature: {props.addedDestination.temperature}° Celcius</h4>
                     <h4>{props.addedDestination.gravity}x Earth's Gravity</h4>
                     <img className="destImage" src={props.addedDestination.image_url} alt={props.addedDestination.name}></img>
-                    <h4>Time to Destination: {(props.addedDestination.distance * 1000000 / 83827079).toFixed(2)} Hours.</h4>
+                    <h4 className= "hoursToDest">Time to Destination: {(props.addedDestination.distance * 1000000 / 83827079).toFixed(2)} Hours.</h4>
+                    <h4 className= "destPrice">Estimated Round-Trip Cost: {(props.addedDestination.distance * 1000000 / 20000)} Duckets</h4>
                     <button className="deleteButton" onClick={() => props.handleDelete(props.addedDestination)}>Remove location from itinerary</button>
                     </div>
                 </div>
@@ -27,7 +28,8 @@ export default function AddedDestinations(props){
                     <h4>Temperature: {props.addedDestination.temperature}° Celcius</h4>
                     <h4>{props.addedDestination.gravity}x Earth's Gravity</h4>
                     <img className="destImage" src={props.addedDestination.image_url} alt={props.addedDestination.name}></img>
-                    <h4>Time to Destination: {(props.addedDestination.distance * 1000000 / 167654158).toFixed(2)} Hours.</h4>
+                    <h4 className= "hoursToDest">Time to Destination: {(props.addedDestination.distance * 1000000 / 167654158).toFixed(2)} Hours.</h4>
+                    <h4 className= "destPrice">Estimated Round-Trip Cost: {(props.addedDestination.distance * 1000000 / 10000)} Duckets</h4>
                     <button className="deleteButton" onClick={() => props.handleDelete(props.addedDestination)}>Remove location from itinerary</button>
                     </div>
                 </div>

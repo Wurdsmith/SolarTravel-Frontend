@@ -33,13 +33,14 @@ export default function Form(props){
                         <label>
                         Filter by gravitational preference:
                         <select className= "select" onChange= {(event) => props.handleFilter(event.target.value, "gravity")}>
-                            <option value="heavy">High gravity.</option>
-                            <option value="medium">medium gravity.</option>
-                            <option value="light">light.</option>
-                            <option value="lightest">lightest.</option>
+                            <option value="heavy">High - I need a workout!</option>
+                            <option value="medium">Medium - As close to earth as possible.</option>
+                            <option value="light">Light - I want to float.</option>
+                            <option value="lightest">Lightest - I want to fly!.</option>
                         </select>
                         </label>
                         <button className="filterButton" onClick={(e) => props.handleFilterSubmit(e)}>Filter Destinations</button>
+                        <button className="resetButton" onClick={(e) => props.resetFilter(e)}>Reset Filter</button>
                     </form>
                 </div>
             </div>

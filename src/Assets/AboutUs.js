@@ -17,30 +17,39 @@ export const timelineData = [
         }
     },
     {text: "First test-flight completed. The destination? Earth's moon, of course!",
-    date: "7/05/2175",
+    date: "7/05/2175"
     },
 
     {text: "The great explosion. We don't talk about this date very often.",
-    date: "8/25/2175",
+    date: "8/25/2175"
     },
 
-    {text: "First successful launch of our Enterprise-class cruiser, carrying SolarTravel's first customers to Jupiter Station 1.",
-    date: "12/28/2175",
+    {text: "First successful launch of our Enterprise-class cruiser, carrying SolarTravel's first customers to Jupiter Station 1 and back again.",
+    date: "12/28/2175"
     },
 
     {text: "SolarTavel outfits its fleet with solar sail technology, increasing thrust efficiency and improving power to all onboard lavoratories.",
-    date: "6/20/2176",
+    date: "6/20/2176"
     },
 
     {text: "SolarTavel partners with StarResorts to offer exclusive transportation to each of their premier resorts, located on several of Saturn's many moons.",
-    date: "6/20/2176",
+    date: "2/24/2177"
     },
 
     {text: "First successful launch of our Odyssey-class cruiser, the latest and fastest cruiser in our fleet.",
-    date: "12/28/2175",
+    date: "4/16/2177"
     },
 
-    {text: "SolarTavel adds three new destinations to its list of solar getaways, including dwarf planets Pluto and Eris",
-    date: "6/20/2176",
+    {text: "SolarTavel adds three new destinations to its list of solar getaways, including dwarf planets Pluto and Eris.",
+    date: "5/23/2177"
+    },
+
+    {text: "TechStar awards SolarTravel the distinguished 'Rising Star' award in 2178.",
+    date: "1/16/2178"
+    },
+
+    {text: "Research officially begins on SolarTravel's Juggernaut-class ship.",
+    date: "1/16/2178"
     }
+
 ]
