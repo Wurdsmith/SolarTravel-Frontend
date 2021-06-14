@@ -1,4 +1,5 @@
-export function filterHotDestinations(temp, grav, dest) {
+export function filterDestinations(temp, grav, dest) {
+  debugger
     return (dispatch) => {
       fetch("http://localhost:3000/itineraries/1")//Fetches only the destinations from the main itinerary that contains all destinations.
       .then(function(response) {

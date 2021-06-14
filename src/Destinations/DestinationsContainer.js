@@ -26,22 +26,22 @@ class DestinationsContainer extends Component {
       this.props.addDestination(newDestination)
       this.props.history.push("/itinerary")
     }
-
-
-    
     
     handleFilter(eventValue, formType) {
-      console.log(formType, eventValue)
-      
       this.setState({
         [formType]: eventValue
+      }, () =>{
+      this.fetchFilteredDests(this.state.temperature, this.state.distance, this.state.gravity) //This function was placed within the setState function to call only after the component's state has been updated.
       })
+    }
 
+    fetchFilteredDests(temperature, distance, gravity){
+      debugger
+      this.props.filterDestinations(temperature, distance, gravity)
     }
 
 
     render() {
-      console.log(this.state)
         return (
         <div className="homeContainer">
             <div className="formContainer">
@@ -61,4 +61,4 @@ function mapStateToProps(state) {
     return {destinations: state.allDestinations.destinations}
   }
 
-export default withRouter(connect(mapStateToProps, {addDestination, fetchDestinations})(DestinationsContainer))
+export default withRouter(connect(mapStateToProps, {addDestination, fetchDestinations, filterDestinations})(DestinationsContainer))
