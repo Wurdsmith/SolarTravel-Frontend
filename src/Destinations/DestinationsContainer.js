@@ -16,10 +16,13 @@ class DestinationsContainer extends Component {
     this.state = {
       temperature:'hot',
       distance:'closest',
-      gravity:'heavy'
+      gravity:'high'
     }
   }
 
+  componentDidMount(){ //Refetches the filteredDestinations array when the user navigates to another page, so the full list is visible when visting the homepage next.
+    this.props.fetchFilteredDestinations()
+  }
 
   componentWillUnmount(){ //Refetches the filteredDestinations array when the user navigates to another page, so the full list is visible when visting the homepage next.
     this.props.fetchFilteredDestinations()
@@ -64,7 +67,7 @@ class DestinationsContainer extends Component {
           </div>
         )
       }
-      else{
+      if (this.props.filteredDestinations.length < 1 && this.props.destinations.length > 0){
         return (
           <div className="alert">
             <div className="formContainer">
@@ -75,6 +78,10 @@ class DestinationsContainer extends Component {
           </div>
           )
       }
+      else{
+        return null
+      }
+    
     }
 }
 
