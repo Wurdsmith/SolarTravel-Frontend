@@ -154,6 +154,10 @@ label{
   font-weight: bolder;
 }
 
+.noResults{
+  border-radius: 12px;
+  margin: 24px;
+}
 .addedDestContainer{
   justify-content: center;
   display:flex;
