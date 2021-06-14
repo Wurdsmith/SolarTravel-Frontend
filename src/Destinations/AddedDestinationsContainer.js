@@ -36,7 +36,6 @@ class AddedDestinationsContainer extends Component {
     this.props.history.push("/itinerary")
   }
 
-
     render() {
         return (
           <div>

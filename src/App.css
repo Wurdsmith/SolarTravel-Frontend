@@ -193,7 +193,20 @@ label{
   font-size: larger;
 }
 
-.about{
+.shipForm{
+  border-radius: 25px;
+  background-color: rgb(0, 40, 105, 0.5);
+  display:flex;
+  justify-content: center;
+  display: inline-block;
+	text-align: center;
+  width: 1100px;
+  padding-bottom: 1.5em;
+}
+
+.shipHeader{
+  padding: 12px;
+  font-size: larger;
   text-align: center;
 }
 
@@ -222,6 +235,7 @@ label{
 
 .about{
   font-size: large;
+  text-align: center;
 }
 
 .aboutUs{
