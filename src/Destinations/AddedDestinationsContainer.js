@@ -5,6 +5,7 @@ import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import deleteAddedDestination from '../actions/DeleteAddedDestination'
 import Ships from '../Components/Ships'
+import {Link} from 'react-router-dom'
 
 class AddedDestinationsContainer extends Component {
 
@@ -37,6 +38,7 @@ class AddedDestinationsContainer extends Component {
   }
 
     render() {
+      if (this.props.addedDestinations > 0)
         return (
           <div>
             <div className = "shipContainer">
@@ -48,6 +50,14 @@ class AddedDestinationsContainer extends Component {
             </div>
           </div>
         )
+      else{
+        return(
+          <div className="emptyItinerary">
+          <h2>Looks like you havent added any destinations to your itinerary yet! Visit the {<Link to="/" className='home-link'>homepage</Link>} to add your first destination.</h2>
+          <img src='https://images.theconversation.com/files/381158/original/file-20210128-21-1iu0ae0.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip' alt='Return home'></img>
+          </div>
+        )
+      }
   }
 }
 

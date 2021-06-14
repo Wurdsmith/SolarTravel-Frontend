@@ -33,9 +33,14 @@ Nav{
   width: 800px;
 
 }
+
 .text-link{
   text-decoration:none;
   color:white;
+}
+
+.home-link{
+  color:#0878ac;
 }
 
 .AppContainer{
@@ -154,7 +159,7 @@ label{
   font-weight: bolder;
 }
 
-.noResults{
+.noResultsImage{
   border-radius: 12px;
   margin: 24px;
 }
@@ -187,6 +192,10 @@ label{
 
 .itinerary{
   text-align: center;
+}
+
+.emptyItinerary{
+  margin:48px;
 }
 
 .hoursToDest{

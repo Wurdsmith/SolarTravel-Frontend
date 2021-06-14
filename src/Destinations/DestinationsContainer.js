@@ -69,12 +69,12 @@ class DestinationsContainer extends Component {
       }
       if (this.props.filteredDestinations.length < 1 && this.props.destinations.length > 0){
         return (
-          <div className="alert">
+          <div className="emptyFilter">
             <div className="formContainer">
               <Form handleFilter={(eventValue, formType) => this.handleFilter(eventValue, formType)} handleFilterSubmit={(e) => this.handleFilterSubmit(e)} handleReset={(e) => this.handleReset(e)}/>
             </div>
               <h1>We're sorry. We don't have any destinations that match those criteria.</h1>
-              <img className ="noResults" src='https://www.cnet.com/a/img/wb2a0OeMJ8t4Vq_pdSsoPxc9A1Y=/940x0/2019/05/22/1b710a6b-5f4d-4987-a046-c23674b221a3/picard-meme-facepalm.jpg'></img>
+              <img className ="noResultsImage" src='https://www.cnet.com/a/img/wb2a0OeMJ8t4Vq_pdSsoPxc9A1Y=/940x0/2019/05/22/1b710a6b-5f4d-4987-a046-c23674b221a3/picard-meme-facepalm.jpg' alt='Picard'></img>
           </div>
           )
       }
