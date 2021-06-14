@@ -2,7 +2,7 @@ import '../App.css';
 import React, {Component} from 'react'
 import AddedDestinations from '../Components/AddedDestinations'
 import {withRouter} from 'react-router-dom'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
 import deleteAddedDestination from '../actions/DeleteAddedDestination'
 import Ships from '../Components/Ships'
 
@@ -30,7 +30,7 @@ class AddedDestinationsContainer extends Component {
     }
   }
 
-    handleDelete(destination){
+    handleDelete(destination){ // Deletes the selected destinations object from the addedDestinations array, and thus, the DOM.
     let destinationId = destination.id
     this.props.deleteAddedDestination(destinationId)
     this.props.history.push("/itinerary")

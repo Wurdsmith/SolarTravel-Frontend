@@ -14,14 +14,14 @@ class DestinationsContainer extends Component {
     super()
     // Sets the intial state to the value that should be assigned to the default selections in the filter sections (this way if the user doesn't change the value, the filter will still work).
     this.state = {
-      destinations: [],
       temperature:'hot',
       distance:'closest',
       gravity:'heavy'
     }
   }
 
-  componentWillUnmount(){
+
+  componentWillUnmount(){ //Refetches the filteredDestinations array when the user navigates to another page, so the full list is visible when visting the homepage next.
     this.props.fetchFilteredDestinations()
   }
   
@@ -51,7 +51,7 @@ class DestinationsContainer extends Component {
 
 
     render() {
-      if (this.props.filteredDestinations.length > 0){
+      if (this.props.filteredDestinations.length > 0){ // Determines what to render depending on whether the allDestinations array is empty or not.
         return (
         <div className="homeContainer">
             <div className="formContainer">
